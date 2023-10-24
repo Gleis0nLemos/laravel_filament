@@ -26,7 +26,7 @@ class StoreResource extends Resource
                 Forms\Components\TextInput::make('name'),
                 Forms\Components\TextInput::make('phone'),
                 Forms\Components\RichEditor::make('about'),
-                Forms\Components\TextInput::make('logo'),
+                Forms\Components\FileUpload::make('logo')->directory('stores')->disk('public'),
                 Forms\Components\TextInput::make('slug'),
             ]);
     }
