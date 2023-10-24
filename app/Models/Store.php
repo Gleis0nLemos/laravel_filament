@@ -10,7 +10,7 @@ class Store extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $guarded = [];
 
     public function products(): HasMany
     {

@@ -21,9 +21,13 @@ class StoreResource extends Resource
 
     public static function form(Form $form): Form
     {
-        return $form
+        return $form->columns(1)
             ->schema([
-                //
+                Forms\Components\TextInput::make('name'),
+                Forms\Components\TextInput::make('phone'),
+                Forms\Components\RichEditor::make('about'),
+                Forms\Components\TextInput::make('logo'),
+                Forms\Components\TextInput::make('slug'),
             ]);
     }
 
