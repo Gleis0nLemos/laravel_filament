@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('logo');
             $table->string('slug');
             $table->text('about');
             $table->string('phone');
+            $table->string('logo')->nullable();
 
             $table->timestamps();
         });

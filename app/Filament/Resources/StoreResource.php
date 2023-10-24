@@ -35,7 +35,13 @@ class StoreResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('id')->sortable(),
+                Tables\Columns\TextColumn::make('name')
+                                        ->searchable()
+                                        ->label('Loja'),
+                Tables\Columns\TextColumn::make('created_at')
+                                        ->sortable()                           
+                                        ->date('d-m-Y H:i'),
             ])
             ->filters([
                 //
